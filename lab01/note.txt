@@ -1,0 +1,28 @@
+console.log()- print
+let,const,var - zmienna
+let x = 5
+typeof- pokazuje jaka to jest zmienna
+mozna dodawac i po przecinku pisac printy
+kazdy wiersz konczymy srednikiem
+mozemy zmieniac typy zmiennych
+console.log("5"+1);   ----  51
+console.log("5"-1);   ----  4
+console.log(+"5"+1);  ----  6
+
+
+w terminalU:
+node nazwapliku
+
+if (a<10){
+console.log("Mniejsze niz 10");
+}
+else{
+console.log("Wieksze niz 10");
+}
+
+for (let i = 0; i<5; i++) {
+console.log(i);
+}
+
+&& and
+|| lub
