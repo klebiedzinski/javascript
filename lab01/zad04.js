@@ -8,3 +8,4 @@ if (a+b>c && b+c>a && a+c>b){
 else{
     console.log("nie mozna")
 }
+
