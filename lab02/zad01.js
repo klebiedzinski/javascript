@@ -1,3 +1,4 @@
+'use strict';
 function czyjest(x,table){
     for(i=0; i<table.length; ++i){
         if (x==table[i]){
