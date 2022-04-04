@@ -1,3 +1,4 @@
+'use strict';
 function toArray(a,b) {
     return array=[a,b]
 }

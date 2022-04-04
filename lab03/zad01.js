@@ -67,19 +67,19 @@ const person = {
 // ========================= Zadanie 4 =========================
 // Czym się różnią poniższe dwa fragmenty kodu?
 // Jak działa operator '...'?
-// 
-// const arr = [1, 2];
-// const newArr1 = [arr, 3, 4];
-// console.log(newArr1);  // [[1,2],3,4]
-// const newArr2 = [...arr, 3, 4]; 
-// console.log(newArr2); // [1,2,3,4]
+
+const arr = [1, 2];
+const newArr1 = [arr, 3, 4];
+console.log(newArr1);  // [[1,2],3,4]
+const newArr2 = [...arr, 3, 4]; 
+console.log(newArr2); // [1,2,3,4]
 
 // Co zostanie wyświetlone na ekranie?
 // Wyjaśnij wynik
 
-// const word = 'javascript';
-// const arrWord = [...word];
-// console.log(arrWord); //[j,a,v,a,s,c,r,i,p,t]
+const word = 'javascript';
+const arrWord = [...word];
+console.log(arrWord); //[j,a,v,a,s,c,r,i,p,t]
 
 // ========================= Zadanie 5 =========================
 // Zapoznaj się z kodem poniżej. Jaki będzie jego wynik i dlaczego?
