@@ -1,8 +1,8 @@
 'use strict';
 function funkcja () {
     const a = 5;
-    const wfunkcji = (x) => x + a;
-    return wfunkcji(5);
+    const wFunkcji = (x) => x + a;
+    return wFunkcji(5);
 }
 console.log(funkcja())
 
