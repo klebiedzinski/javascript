@@ -64,11 +64,22 @@ const zad8 = lodash.filter(lp3, (el) => el.change<0)
 const zad9 = lodash.keyBy(lp3, (el) => el.song)
 // console.log(zad9)
 
-//10
-const bandSongs = lodash.groupBy(lp3, (el) => el.author)
-console.log(bandSongs)
+//10 -- not done
+// const bandSongs = lodash.groupBy(lp3, (el) => el.author)
+// console.log(bandSongs)
 
 
+//11
+const zad11 = lodash.countBy(lp3, (el) => el.author)
+// console.log(zad11)
+
+
+//12
+const lowest = lodash.sortBy(lp3, (el) => el.change)[0]
+const help = lodash.sortBy(lp3, (el) => el.change).reverse()
+const highest = help[0]
+console.log(lowest)
+console.log(highest)
 
 
  
