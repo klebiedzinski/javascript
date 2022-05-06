@@ -1,4 +1,5 @@
 
+const { reduce } = require('lodash');
 const { lp3 } = require('./toplist');
 const sleep = (milliseconds) => {
     return new Promise(resolve => setTimeout(resolve, milliseconds))
@@ -12,14 +13,6 @@ function zadanie_6(n,min,max){
 }
 
 // zadanie_6(5,1,5)
-
-//7 - not done
-
-// for (let i = 0; i < 10; ++i){
-//     sleep(2000 * i+1)
-//     console.log(lp3[i])
-    
-// }
 
 
 

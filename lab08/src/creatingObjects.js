@@ -140,13 +140,13 @@ function BetterBookCreator(title, author) {
     addReader: function foo(el) {this.readers+=el}
   };
   return b;
-}
-const book5 = BetterBookCreator("Lalka", "Bolesław Prus")
+};
+const book5 = BetterBookCreator("Lalka", "Bolesław Prus");
 // book5.print()
-book5.addReader(1)
-book5.addReader(1)
+book5.addReader(1);
+book5.addReader(1);
 // console.log(book5.readers)
-book5.hasOwnPropety('isBestseller')
+// book5.hasOwnPropety('isBestseller')
 
 // Funkcję print zadeklaruj jako wspólną dla wszystkich obiektów tworzonych przez BookCreator.
 // Dopisz do tworzonych obiektów pole readers, które będzie zawierało liczbę czytelników.
@@ -164,4 +164,6 @@ book5.hasOwnPropety('isBestseller')
 // * ZADANIE 5
 // ========================================
 
-// Odwołaj się do zmiennej __proto__ w stworzonym obiekcie, co zawiera ta zmienna i do czego służy?
+// Odwołaj się do zmiennej __proto__ w stworzonym obiekcie, co zawiera ta zmienna i do czego służy? 
+// zawiera informacje o prototypie obiektu, nie dziala mi poprzednie zadanie, bo nie nie stworzylem prototypu, nie wiem jak to zrobic ale chociaz wiedzialem ze tutaj wyskoczy null :)
+// console.log(book5.__proto__)

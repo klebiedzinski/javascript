@@ -1,0 +1,19 @@
+yarn add eslint --dev
+
+
+yarn run eslint --init
+How would you like to use ESLint? · problems
+What type of modules does your project use? · commonjs
+Which framework does your project use? · none
+Does your project use TypeScript? · No
+Where does your code run? · browser
+What format do you want your config file to be in? · JSON   
+
+
+yarn add --dev nodemon
+"scripts": {
+    "start": "nodemon src/index.js"
+}
+
+
+.gitignore!!!!!!
