@@ -45,3 +45,4 @@ const zakupy = require('./listaZakupow.js').listaZakupow;
 // },[]);
 // console.log(result)
  
+
