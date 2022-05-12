@@ -21,7 +21,7 @@ const {
   title1 = "-", 
   author1 = "-", 
   year1 = 1967 
-} = book1;
+} = book1;                          
 
 // console.log(title1);
 // console.log(author1);
@@ -113,8 +113,8 @@ const {
   DrisRole = movie2.Actors.Dris
 } = movie2;
 
-console.log(title); // Oczekiwany output -> Nietykalni
-console.log(director1); // Oczekiwany output -> Olivier Nakache
-console.log(DrisRole); // Oczekiwany output -> Omar Sy
+// console.log(title); // Oczekiwany output -> Nietykalni
+// console.log(director1); // Oczekiwany output -> Olivier Nakache
+// console.log(DrisRole); // Oczekiwany output -> Omar Sy
 
 // Zmodyfikuj teraz swój kod, aby zawierał domyślne wartości, jeśli którakolwiek z własności filmu nie została podana.

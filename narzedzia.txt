@@ -1,3 +1,4 @@
+yarn init
 yarn add eslint --dev
 
 
@@ -16,4 +17,24 @@ yarn add --dev nodemon
 }
 
 
-.gitignore!!!!!!
+.gitignore:
+**/node_modules/
+**/es5out/
+**/log/
+**/.yarn/
+
+
+'use strict'; 
+
+Babel:
+yarn add --dev @babel/core @babel/cli @babel/preset-env @babel/node
+Tworzymy plik .babelrc, a w nim:
+{
+  "presets": ["@babel/preset-env"]
+}
+
+"scripts": {
+  "start": "nodemon src/index.js",
+  "babel": "babel src -d es5out"
+}
+
