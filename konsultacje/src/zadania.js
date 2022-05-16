@@ -61,3 +61,10 @@ function BetterBookCreator(title, author) {
   const Person = name => ({
     
   })
+
+
+
+
+
+  // zad02 lab09
+  
