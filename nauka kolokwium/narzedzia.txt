@@ -1,8 +1,10 @@
-yarn init
-yarn add eslint --dev
+1 tworzysz folder
+
+2 yarn init
+3 yarn add eslint --dev
 
 
-yarn run eslint --init
+4 yarn run eslint --init
 How would you like to use ESLint? · problems
 What type of modules does your project use? · commonjs
 Which framework does your project use? · none
@@ -11,33 +13,26 @@ Where does your code run? · browser
 What format do you want your config file to be in? · JSON   
 
 
-yarn add --dev nodemon
+5 yarn add --dev nodemon
 "scripts": {
     "start": "nodemon src/index.js"
 }
 
 
-.gitignore:
+6 .gitignore:
 **/node_modules/
 **/es5out/
 **/log/
 **/.yarn/
 
 
-'use strict'; 
+'use strict'; !!!
+
+
 
 Babel:
 yarn add --dev @babel/core @babel/cli @babel/preset-env @babel/node
-Tworzymy plik .babelrc, a w nim:
-{
-  "presets": ["@babel/preset-env"]
-}
-
-"scripts": {
-  "start": "nodemon src/index.js",
-  "babel": "babel src -d es5out"
-}
 
 
-
-!!!!!!!!!const games = require('./games.js').games;
+Lodash:
+const lodash = require('lodash');

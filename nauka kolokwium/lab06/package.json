@@ -1,5 +1,5 @@
 {
-  "name": "konsultacje",
+  "name": "lab06",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -8,6 +8,7 @@
     "nodemon": "^2.0.16"
   },
   "scripts": {
-    "start": "nodemon src/zadania.js"
+    "z4": "nodemon src/zad4.js",
+    "z5": "nodemon src/zad5.js"
   }
 }

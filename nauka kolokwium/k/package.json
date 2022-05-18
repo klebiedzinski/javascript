@@ -1,5 +1,5 @@
 {
-  "name": "konsultacje",
+  "name": "k",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -8,6 +8,8 @@
     "nodemon": "^2.0.16"
   },
   "scripts": {
-    "start": "nodemon src/zadania.js"
+    "script1": "nodemon src/zad1.js",
+    "script2": "nodemon src/zad2.js",
+    "script3": "nodemon src/zad3.js"
   }
 }

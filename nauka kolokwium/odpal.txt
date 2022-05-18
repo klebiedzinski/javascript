@@ -1,0 +1,97 @@
+1 tworzysz folder
+2 yarn init
+3 yarn add eslint --dev
+4 yarn run eslint --init
+How would you like to use ESLint? · problems
+What type of modules does your project use? · commonjs
+Which framework does your project use? · none
+Does your project use TypeScript? · No
+Where does your code run? · browser
+What format do you want your config file to be in? · JSON   
+5 yarn add --dev nodemon
+ "scripts": {
+    "script1": "nodemon src/zad1.js",
+    "script2": "nodemon src/zad2.js",
+    "script3": "nodemon src/zad3.js"
+  }
+
+
+6 .gitignore:
+**/node_modules/
+**/es5out/
+**/log/
+**/.yarn/
+
+
+'use strict'; !!!
+
+
+
+Babel:
+yarn add --dev @babel/core @babel/cli @babel/preset-env @babel/node
+
+
+Lodash:
+const lodash = require('lodash');
+
+
+
+
+
+
+!!!metody array - https://www.youtube.com/watch?v=R8rmfD9Y5-c&t=9s
+filter 
+map
+find
+some/every
+includes
+sort
+
+array.filter((item) => {
+    return item==="zdam"
+})
+
+
+!!!classy:
+class CoffeeShop {
+  constructor(name, menu) {
+    this.name = name;
+    this.menu = menu;
+    this.orders = [];
+  }
+
+  addOrder(name) {
+    const item = this.menu.filter((item) => item.item === name)[0];
+
+    if (item === undefined) return "This item is currently unavailable!";
+
+    this.orders = [...this.orders, item];
+    return "Order added!";
+  }
+
+const shop = new CoffeeShop("Shop1", [
+  { item: "cinnamon roll", type: "food", price: 4.99 },
+  { item: "hot chocolate", type: "drink", price: 2.99 },
+  { item: "lemon tea", type: "drink", price: 2.5 },
+]);
+
+
+!!!GRUPOWANIE
+const resultArray = help.reduce((object,element) => {
+    const { house } = element;
+    object[house] = object[house] ?? [];
+    if (element.alive === true){
+       if (element.hogwartsStaff === false && element.hogwartsStudent === false) {
+            let a ={
+                name: element.name,
+                type: "none"
+            }
+            object[house].push(a);
+       }
+
+
+
+
+
+Grupa_1_KLebiedziński
+aleksandra.tejszerska@ug.edu.pl

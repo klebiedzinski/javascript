@@ -1,5 +1,5 @@
 {
-  "name": "konsultacje",
+  "name": "lab07",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -7,7 +7,10 @@
     "eslint": "^8.15.0",
     "nodemon": "^2.0.16"
   },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
   "scripts": {
-    "start": "nodemon src/zadania.js"
+    "zad2": "nodemon src/zad2.js"
   }
 }
