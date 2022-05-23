@@ -71,7 +71,7 @@ function CreateInstrument(name, type) {
    return instrument;
 }
 
-const instrument = CreateInstrument("gitara elektryczna","gitary")
+
 
 // 1.6. 
 // Uzupełnij poniższy konstruktor, który tworzy obiekt dziedziczący po Instrument. Wykorzystaj do jego stworzenia konstruktor z zadania poprzedniego.

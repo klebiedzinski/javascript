@@ -1,16 +1,18 @@
+let x=0;
+var interval;
+function counter(){
+    x++;
+    console.log(x)
+}
 function startCounter(x){
-    setInterval(() => {
-        ++x
-        console.log(x)
-    }, 1000)
+   interval = setInterval(counter,1000)
 }
 
-function stopCounter(foo){
-    setTimeout(() => clearTimeout(foo),10)
+function stopCounter(){
+    clearInterval(interval)
 }
 
-function clearCounter(x){
+function clearCounter(){
     x = 0
-    return x
+    
 }
-let x = 0
