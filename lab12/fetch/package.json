@@ -1,0 +1,17 @@
+{
+  "name": "fetch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "nodemon": "^2.0.16"
+  },
+  "scripts": {
+    "start": "nodemon index.mjs"
+  },
+  "dependencies": {
+    "fetch": "^1.1.0",
+    "node-fetch": "^3.2.4"
+  }
+}
