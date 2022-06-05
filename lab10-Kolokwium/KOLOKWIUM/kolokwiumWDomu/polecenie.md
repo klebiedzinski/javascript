@@ -203,7 +203,7 @@ instancjaLog.printHistory([2]);
 // błąd
 ```
 
-3. Funkcję `createHistory`, która usuwa wszystkie wydrukowane komunikaty (sprawia, że printHistory zwraca pusty string).
+3. Funkcję `clearHistory`, która usuwa wszystkie wydrukowane komunikaty (sprawia, że printHistory zwraca pusty string).
 
 ```js
 // Input:

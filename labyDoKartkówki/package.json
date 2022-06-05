@@ -8,6 +8,9 @@
     "nodemon": "^2.0.16"
   },
   "scripts": {
-    "start": "nodemon src/index.js"
-}
+    "lodash": "nodemon src/lodash.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }

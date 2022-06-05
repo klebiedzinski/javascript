@@ -1,17 +1,17 @@
 const { isArray } = require('lodash');
 const lodash = require('lodash');
-
+//different with i topairs
 function detectChanges(original, modified) {
     const a = Object.entries(original)
     .reduce((akum,item) => {
         // console.log(item)
-        isArray(item[1]) ?  akum.push([item[0],item[1][0]]) : akum.push(item)
+        isArray(item[1]) ?  akum.push([item[0],item[1][0]]) : akum.push(item)  //jak porownac tablice 
         return akum
     },[])
     const b = Object.entries(modified)
     .reduce((akum,item) => {
         // console.log(item)
-        isArray(item[1]) ?  akum.push([item[0],item[1][0]]) : akum.push(item)
+        isArray(item[1]) ?  akum.push([item[0],item[1][0]]) : akum.push(item) //jak porownac tablice
         return akum
     },[])
     
@@ -24,9 +24,6 @@ function detectChanges(original, modified) {
     console.log(b)
     console.log(result)
 }
-// jak porownac tablice
-
-// Przykład 1
 
 // Input
 const object1 = {

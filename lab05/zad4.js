@@ -1,14 +1,13 @@
-'use strict';
-const arrOfObjs = [ 
-    { id: 'abc', name: 'Ala' }, 
-    { id: 'def', name: 'Tomek' }, 
-    { id: 'ghi', name: 'Jan' } 
-  ];
+const a = 
+[ 
+  { id: 'abc', name: 'Ala' }, 
+  { id: 'def', name: 'Tomek' }, 
+  { id: 'ghi', name: 'Jan' } 
+]
 
-const wynik =  arrOfObjs.reduce((objects,curValue, curIndex,Table) => {
-    objects.push({[Table[curIndex]['id']] : curValue});
-    return objects
+const result = a.reduce((akum,el,index) => {
+  akum.push({[a[index]['id']] : el})
+  return akum
+},[])
 
-
-},[]);
-console.log(wynik);
+console.log(result)
