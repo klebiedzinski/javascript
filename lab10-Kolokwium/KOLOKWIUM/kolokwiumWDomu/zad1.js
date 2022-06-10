@@ -11,7 +11,7 @@ const miniseries = series.filter((item) => {
     }
     return a
 })
-// console.log(miniseries)
+console.log(miniseries)
 const seriale = series.filter((item) => {return item.seasons!==1})
 .sort((a,b) => {return a.startYear-b.startYear})
 .map((item) => {
@@ -31,4 +31,4 @@ const t1 = seriale.filter((item) => {return item.startYear<2010})
 const t3 = seriale.filter((item) => {return item.startYear>=2010&&item.startYear<2020})
 const t2 = seriale.filter((item) => {return item.startYear>=2020})
 const result = [t1,t2,t3]
-console.log(result)
+// console.log(result)

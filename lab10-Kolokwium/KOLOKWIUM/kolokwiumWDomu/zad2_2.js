@@ -1,4 +1,3 @@
-const lodash = require('lodash');
 
 function detectChanges(original, modified) {
     const t1 = Object.entries(original).map((item) => [item[0],item[1].toString()])
@@ -8,7 +7,6 @@ function detectChanges(original, modified) {
         return akum
     },[])
     return result
-
 }
 
 

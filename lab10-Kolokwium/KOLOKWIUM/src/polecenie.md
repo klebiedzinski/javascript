@@ -45,11 +45,11 @@ w pliku [series.js](/series.js) znajduje się lista seriali. Wykorzystując jedy
 
    Dodatkowo:
 
-   - Seriale powinny być posortowane latami, od najstarszego tzn. wg roku rozpoczęcia, a następnie wg. roku zakończenia (jeśli serial nie ma roku zakończenia, to powinien wyświetlić się przed serialami, które rok zakończenia mają).
+   - Seriale powinny być posortowane latami, od najstarszego tzn. wg roku rozpoczęcia, a następnie wg. roku zakończenia **(jeśli serial nie ma roku zakończenia, to powinien wyświetlić się przed serialami, które rok zakończenia mają).**
    - Gatunek powinien być zapisany jako string, nie jako tablica stringów:
      `["Dramat", "Wojenny"]` -> `"Dramat, Wojenny",`
      Między kolejnymi gatunkami, po przecinku znajduje się spacja!
-   - Jeżeli serial nie ma roku zakończenia, to nie wyświetlamy go (tj. roku zakończenia) w obiekcie.
+   - **Jeżeli serial nie ma roku zakończenia, to nie wyświetlamy go (tj. roku zakończenia) w obiekcie.**
 
 ```js
 // Output miniseries

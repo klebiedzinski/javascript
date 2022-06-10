@@ -60,8 +60,8 @@ class Log{
         this.logs.push(str);
         return str
     }
-    printHistory(range = this.logs.length){
-        console.log(range)
+    printHistory(range = this.logs.length){ // :((((( [0,this.logs.length]
+        console.log(this.logs.length)
         return this.logs.reduce((akum,el,index)=>{
             if(index >= range[0] && index <= range[1]){
                 akum+=el.toString()+"\n"
@@ -78,9 +78,9 @@ class Log{
 }
 const instancjaLog = new Log([])
 
-console.log(instancjaLog.write("aa1","aa",2,() => {}))
-console.log(instancjaLog.write("aa2","aa",2,() => {}))
-console.log(instancjaLog.write("aa3","aa",2,() => {}))
-console.log(instancjaLog.write("aa4","aa",2,() => {}))
+instancjaLog.write("aa1","aa",2,() => {})
+instancjaLog.write("aa2","aa",2,() => {})
+instancjaLog.write("aa3","aa",2,() => {})
+instancjaLog.write("aa4","aa",2,() => {})
 
-console.log(instancjaLog.printHistory([0,2]))
+console.log(instancjaLog.printHistory())

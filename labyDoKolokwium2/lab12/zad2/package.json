@@ -1,0 +1,9 @@
+{
+  "name": "zad2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.17.0"
+  }
+}

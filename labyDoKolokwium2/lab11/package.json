@@ -1,0 +1,16 @@
+{
+  "name": "lab11",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "nodemon": "^2.0.16"
+  },
+  "scripts": {
+    "zad2": "nodemon src/eventloop.js",
+    "zad3": "nodemon src/zad3.js",
+    "zad4": "nodemon src/zad4.js",
+    "zad5": "nodemon src/zad5.js"
+  }
+}
