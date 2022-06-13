@@ -4,6 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^8.17.0"
-  }
+    "eslint": "^8.17.0",
+    "nodemon": "^2.0.16"
+  },
+  "scripts": {
+    "start": "nodemon src/promises.js"
+}
 }

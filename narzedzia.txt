@@ -16,6 +16,7 @@ yarn add --dev nodemon
     "start": "nodemon src/index.js"
 }
 
+yarn add axios
 
 .gitignore:
 **/node_modules/

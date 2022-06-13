@@ -11,6 +11,7 @@
     "start": "nodemon src/index.mjs"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "node-fetch": "^3.2.6"
   }
 }

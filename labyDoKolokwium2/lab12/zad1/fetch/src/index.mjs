@@ -15,8 +15,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 
 .then( (response) => {
     const {body: data, headers} = response
-    console.log(data)
-    console.log(headers)
+    // console.log(data)
+    // console.log(headers)
 
 })
 
@@ -29,6 +29,27 @@ Stwórz funkcję, która przyjmuje jako parametr obiekt takiej postaci:
     completed: (pole typu boolean)
 }
 
+
 Następnie wysyła taki obiekt za pomocą funkcji fetch pod url: https://jsonplaceholder.typicode.com/todos
 Jeśli dodanie zakończy się sukcesem - wyświetli w konsoli komunikat 'Dodano' i wyświetli id dodanego obiektu. W przeciwnym wypadku wypisze błąd.
 */
+
+function postUser(user){
+    fetch('https://jsonplaceholder.typicode.com/todos', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
+    .then(() => console.log("Dodano, id:"+user.idUser))
+    .catch(() => console.log("błąd"))
+}
+
+const user = {
+    idUser: 2,
+    title: "title",
+    completed: true
+}
+
+postUser(user)
