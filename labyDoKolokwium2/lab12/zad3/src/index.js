@@ -10,8 +10,8 @@ class Vector2{
     }
 
     multiplyBy(number){
-        this.x *= x
-        this.y *= y
+        this.x *= number
+        this.y *= number
     }
 
     toString(){
@@ -69,18 +69,29 @@ class DeathStar extends Ship{
         super('Empire', position,100,100)
         this.deathRayAvailable = true
     }
+    // makeDamage(enemyShip){
+    //     return new Promise((resolve, reject) => {
+    //         if(this.deathRayAvailable) {
+    //             resolve(super.makeDamage(enemyShip))
+    //             console.log("Statek Rebelii otrzymał obrażenia rowne: "+this.strength)
+    //             this.deathRayAvailable=false
+    //             setTimeout(() => {
+    //                 this.resetDeathRay()
+    //             },3 * 1000)
+    //         }
+    //         else reject("deathRay niedostępny")
+    //     })
+    // }
+    //dlaczego tutaj promise?
     makeDamage(enemyShip){
-        return new Promise((resolve, reject) => {
-            if(this.deathRayAvailable) {
-                resolve(super.makeDamage(enemyShip))
+        if(this.deathRayAvailable){
+                super.makeDamage(enemyShip)
                 console.log("Statek Rebelii otrzymał obrażenia rowne: "+this.strength)
                 this.deathRayAvailable=false
                 setTimeout(() => {
                     this.resetDeathRay()
                 },3 * 1000)
-            }
-            else reject("deathRay niedostępny")
-        })
+        }
     }
 
     resetDeathRay(){

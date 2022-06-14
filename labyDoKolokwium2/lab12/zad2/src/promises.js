@@ -1,9 +1,18 @@
 'use strict';
 
+const { reject } = require("lodash");
+
 // Zadanie 2.1. 
 // Stwórz obiekt klasy Promise -> niech zakończy się powodzeniem (resolve) po 5 sekundach i zwróci string 'Udało się!'. 
 // Jako callback niech wypisze zwrócony string w konsoli.
+// const promisa = new Promise((resolve,reject) => [
+//     setTimeout(() => {
+//         resolve( "Udało się!")
+//     },5000)
+// ])
 
+// const result = promisa.then((data) => console.log(data))
+// result
 
 
 
@@ -11,10 +20,16 @@
 // Zmodyfikuj powyższy kod tak, aby zamiast z sukcesem - promise zakończył się porażką i zwracał string 'Porażka'.
 // Skorzystaj z then() aby obsłużyć błąd.
 
-// const promise2 = new Promise((resolve,reject) => {
-//     reject("Porażka")
-//     .then((str) => {console.log(str)})
-// })
+// ------------jak to zrobic przy uzyciu then?
+const promisa = new Promise((resolve,reject) => [
+    setTimeout(() => {
+        reject("Porażka")
+        resolve( "Udało się!")
+    },5000)
+])
+const result = promisa.then((data) => console.log(data)), reason = (err) => console.log(err)
+result 
+promisa.catch((err) => console.log)
 
 // Zadanie 2.3.
 // Zamiast then(), zmodyfikuj powyższy kod używając catch()
@@ -23,15 +38,20 @@
 // Napisz funkcję multiplyAsync(x,y), która zwraca obiekt klasy Promise, kończący się porażką, gdy któryś za argumentów jest niepoprawny (nie jest liczbą).
 // W przeciwnym przypadku zwraca iloczyn dwóch liczb. Napisz callback, który wypisuje wynik w konsoli.
 
-function multiplyAsync(x,y) {
-    const promise = new Promise((resolve,reject) => {
-        if (typeof x === 'number' && typeof y === 'number') resolve(x*y)
-        else reject("Porażka")
-        
-        
+const multiplyAsync = (x,y) => {
+    return new Promise((resolve,reject) => {
+        if (typeof x !== 'number' || typeof y !== 'number') {
+            reject(new Error("wrong parameters"))
+        }
+        else {
+            resolve(x*y)
+        }
     })
-    return promise
 }
-multiplyAsync(10,2)
-.then((res) => console.log(res))
-.catch((res) => console.log(res))
+
+// const result = multiplyAsync(1,2)
+// .then((data) => {
+//     console.log(data)
+// })
+
+// result

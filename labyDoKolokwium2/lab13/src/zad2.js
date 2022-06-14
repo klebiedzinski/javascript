@@ -1,57 +1,47 @@
-const grupuj = (funTab1, funTab2, cb) => { 
-    
-};
 const callback = (array) => {
-    console.log("wynik: "+array)
-}
-const func1 = (x, cb) => {
-    setTimeout(() => {
-      console.log("Funkcja 1 z pierwszej tablicy");
-      // inkrementujemy x
-      cb(x + 1);
-    }, 3000);
-}
-const func2 = (x, cb) => {
-    setTimeout(() => {
-      console.log("Funkcja 2 z pierwszej tablicy");
-      // inkrementujemy x
-      cb(x + 2);
-    }, 2000);
-}
-const func3 = (x, cb) => {
-    setTimeout(() => {
-      console.log("Funkcja 3 z pierwszej tablicy");
-      // inkrementujemy x
-      cb(x + 3);
-    }, 1000);
+  console.log(array)
 }
 
-const func11 = (x, cb) => {
+const func1 = () => {
+  return new Promise( (resolve,reject) => {
     setTimeout(() => {
-      console.log("Funkcja 1 z drugiej tablicy");
-      // inkrementujemy x
-      cb(x - 3);
-    }, 3000);
+    resolve(1);
+  },1000)
+
+ });
+  
 }
-const func22 = (x, cb) => {
+
+ const func2 = () => {
+  return new Promise( (resolve,reject) => {
     setTimeout(() => {
-      console.log("Funkcja 2 z drugiej tablicy");
-      // inkrementujemy x
-      cb(x - 2);
-    }, 2000);
+    resolve(2);
+  },2000)
+
+ });
+  
 }
-const func33 = (x, cb) => {
+
+ const func3 = () => {
+  return new Promise( (resolve,reject) => {
     setTimeout(() => {
-      console.log("Funkcja 3 z drugiej tablicy");
-      // inkrementujemy x
-      cb(x - 3);
-    }, 1000);
+    resolve(3);
+  },3000)
+
+ });
+  
 }
-const funTab1 = [func1,func2,func3]
-const funTab2 = [func11,func22,func33]
-
-
-
-
-
+ const funTab1 = [func1(),func3()];
+ const funTab2 = [func2(),func1()];
+const grupuj = (funTab1, funTab2, cb) => { 
+  const result = []
+  Promise.all([Promise.all(funTab1),Promise.all(funTab2)])
+  .then((array) => {
+    array[0].forEach((el,index) => {
+      result.push([el,array[1][index]])
+    })
+    callback(result)
+  })
+ };
+ grupuj(funTab1,funTab2,undefined)
 

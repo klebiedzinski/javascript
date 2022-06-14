@@ -42,3 +42,8 @@ Tworzymy plik .babelrc, a w nim:
 
 
 !!!!!!!!!const games = require('./games.js').games;
+
+
+
+
+console.dir(result,{depth: null}) glebokosc console.log
