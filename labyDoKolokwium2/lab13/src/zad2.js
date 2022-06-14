@@ -45,3 +45,7 @@ const grupuj = (funTab1, funTab2, cb) => {
  };
  grupuj(funTab1,funTab2,undefined)
 
+
+
+
+ Promise.all([funtab1,funtab2])

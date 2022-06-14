@@ -1,0 +1,26 @@
+{
+  "name": "iJeszczeRaz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "scripts": {
+    "zad11_4": "nodemon src/zad11_4.js",
+    "zad12_1": "nodemon src/zad12_1.js",
+    "zad12_2": "nodemon src/zad12_2.js",
+    "zad13_1": "nodemon src/zad13_1.js",
+    "zad13_2": "nodemon src/zad13_2.js",
+    "zad13_3": "nodemon src/zad13_3.js",
+    "zad14_1": "nodemon src/zad14_1.js",
+    "zad14_2": "nodemon src/zad14_2.js",
+    "zad14_3": "nodemon src/zad14_3.js"
+   
+  }
+  
+}

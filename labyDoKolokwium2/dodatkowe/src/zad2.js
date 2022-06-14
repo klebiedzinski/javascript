@@ -1,15 +1,27 @@
-const { result } = require("lodash");
+
 
 const connect = (funTab, fun) => { 
     
-    const tab1 =Promise.all([Promise.all(funTab)]).then((el) => {
-        const result = []
-        const tab = el[0]
-        for (i of tab) {
-            result.push(i)
+    Promise.all(funTab).then((el) => {
+        const tab1 = []
+        for (i of el) {
+            tab1.push(i)
         }
-        // console.log(result)
-        foo(result[0]).then((el)=> console.log(el))
+        // console.log(tab1)
+
+        const tab2 = tab1.map((el) => {return fun(el)})
+        // console.log(tab2)
+        Promise.all(tab2).then((data) => {
+            const result = []
+            // console.log(data)
+            // console.log(tab1)
+            data.forEach((el,index) => {
+                result.push([tab1[index],el])
+            },[])
+            console.log(result)
+        })
+
+        
         
         
     })
@@ -18,9 +30,22 @@ const connect = (funTab, fun) => {
     
 };
 
-const foo1 = async () => {return 1}
-const foo2 = async () => {return 2}
-const foo3 = async () => {return 3}
-const funTab = [foo1(),foo2(),foo3()]
+const promise1  = () => {
+    return new Promise((resolve,reject) => {
+     resolve(2)
+ })
+ }
+   const promise2 = () => {
+    return new Promise((resolve,reject) => {
+     resolve(2)
+ })
+ }
+   const promise3 = () => {
+    return new Promise((resolve,reject) => {
+     resolve(3)
+ })
+ }
+
+const funTab = [promise1(),promise2(),promise3()]
 const foo = async (x) => {return x+1}
 connect(funTab,foo)
